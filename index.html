@@ -1,53 +1,65 @@
 <html>
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coronavirus Watch</title>
-    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/jquery-jvectormap-2.0.5.css">
+    <!-- <script src="scripts/jquery-jvectormap-2.0.5.min.js"></script>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/jquery-jvectormap-world-mill.js"></script>
+    <script src="scripts/os_map_jquery.js"></script> -->
+    <link href="css/index.css" rel="stylesheet" type="text/css">
     <script src="scripts/list_items.js" type="text/javascript"></script>
+    <script src="scripts/index.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <div id="topBar">
-        <span class="os-main-info">Total Confirmed 
-            <span id="osConfirmedNo" class="os-values os-confirmed"></span>
-        </span>
-        <span class="os-main-info">Total Deaths
-            <span id="osDeathNo" class="os-values os-death"></span>
-        </span>
-        <span class="os-main-info">Total Recovered 
-                <span id="osRecoveredNo" class="os-values os-recovered"></span> 
-        </span>
-    </div>
-
     <div class="main-container">
+        <h1 class="os-heading">Covid-19 Monitor</h1>
+        <div id="topBar">
+            <span class="os-main-info">Total Confirmed 
+                <span id="osConfirmedNo" class="os-values os-confirmed"></span>
+            </span>
+            <span class="os-main-info">Total Deaths
+                <span id="osDeathNo" class="os-values os-death"></span>
+            </span>
+            <span class="os-main-info">Total Recovered 
+                    <span id="osRecoveredNo" class="os-values os-recovered"></span> 
+            </span>
+        </div>
         <div id="osContent" class="os-main-con"> 
             <div id="osSearch">
-                <form name="os-country-search-from"></form>
+                <form name="os-country-search-from">
                     <input list="browsers" name="osCountrySearch" id="osInput" placeholder="Enter a country"/>
                     <datalist id="browsers">
-                        <!-- <option value="Chrome">world wide</option> -->
-                    </datalist><br>
-                    <button type='button' class="os-search-btn" onclick="osSearch()">Search</button> 
+                    </datalist>
+                    <button type='button' class="os-search-btn" onclick="osSearch()">Find Country</button> 
                 </form>
             </div>
             <div class="os-lister">
                 <div class="os-country">
-                    <h1>Country</h1>
-                    <p> Confirmed 
-                        <span id="osCountryConfirmed" class="os-country-confirmed os-confirmed"></span>
-                    </p>
-                    <p>Deaths
-                        <span id="osCountryDeath" class="os-country-deaths os-death"></span>
-                    </p>
-                    <p>Recovered 
-                        <span id="osCountryRecovered" class="os-country-recovered os-recovered"></span>
-                    </p>
+                    <span class="os-details">
+                        <p id="osCountryConfirmed" class="os-dets os-confirmed"></p>
+                            Confirmed 
+                    </span>
+                    <span class="os-details">
+                        <p id="osCountryDeath" class="os-dets os-death"></p>
+                            Deaths
+                    </span>
+                    <span class="os-details">
+                        <p id="osCountryRecovered" class="os-dets os-recovered"></p>
+                        Recovered
+                    </span>
                 </div>
             </div>
         </div>
+        <div>
+            <img>
+        </div>
     </div>
-    <footer>
-        Information from <a src="https://github.com/mathdroid/covid-19-api">COVID-19 API</a>
+    <footer class="os-footer">
+        <span>LAST UPDATE <span id="os-time"></span></span>
+        <span>Data from <a href="https://github.com/mathdroid/covid-19-api">COVID-19 API</a></span>
     </footer>
-    <script src="scripts/index.js" type="text/javascript"></script>
 </body>
 </html>

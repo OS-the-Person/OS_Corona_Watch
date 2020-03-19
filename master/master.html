@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Coronavirus Watch</title>
+    <link href="test.css" rel="stylesheet" type="text/css">
+    <script src="scripts/list_items.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="topBar">
+        <span class="os-main-info">Total Confirmed 
+            <span id="osConfirmedNo" class="os-values os-confirmed"></span>
+        </span>
+        <span class="os-main-info">Total Deaths
+            <span id="osDeathNo" class="os-values os-death"></span>
+        </span>
+        <span class="os-main-info">Total Recovered 
+                <span id="osRecoveredNo" class="os-values os-recovered"></span> 
+        </span>
+    </div>
+
+    <div class="main-container">
+        <div id="osContent" class="os-main-con"> 
+            <div id="osSearch">
+                <form name="os-country-search-from"></form>
+                    <input list="browsers" name="osCountrySearch" id="osInput" placeholder="Enter a country"/>
+                    <datalist id="browsers">
+                        <!-- <option value="Chrome">world wide</option> -->
+                    </datalist><br>
+                    <button type='button' class="os-search-btn" onclick="osSearch()">Search</button> 
+                </form>
+            </div>
+            <div class="os-lister">
+                <div class="os-country">
+                    <h1>Country</h1>
+                    <p> Confirmed 
+                        <span id="osCountryConfirmed" class="os-country-confirmed os-confirmed"></span>
+                    </p>
+                    <p>Deaths
+                        <span id="osCountryDeath" class="os-country-deaths os-death"></span>
+                    </p>
+                    <p>Recovered 
+                        <span id="osCountryRecovered" class="os-country-recovered os-recovered"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Information from <a href="https://github.com/mathdroid/covid-19-api">COVID-19 API</a>
+    </footer>
+    <script src="scripts/index.js" type="text/javascript"></script>
+</body>
+</html>

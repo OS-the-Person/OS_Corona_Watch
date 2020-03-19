@@ -4,7 +4,7 @@ body {
 }
 
 .main-container {
-
+    border: 1px solid black;
     margin: auto;
     padding: 50px;
 }
@@ -40,10 +40,10 @@ body {
 #osContent {
     margin-top: 100px;
     padding: 20px;
-
+    border: 1px solid blue;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .os-lister {
-
+    border:1px solid #444;
     padding: 20px;
     margin: 20px;
     width: auto;

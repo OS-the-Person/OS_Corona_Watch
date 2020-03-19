@@ -30,12 +30,14 @@ async function searchCountry(country) {
         deaths = deaths.value;
         confirmed = confirmed.value;
         recovered = recovered.value;
+        lastUpdate = lastUpdate.slice(0, 10)
         console.log(confirmed)
         console.log(deaths)
         
         document.getElementById("osCountryConfirmed").textContent = confirmed;
         document.getElementById("osCountryDeath").textContent = deaths;
         document.getElementById("osCountryRecovered").textContent = recovered;
+        document.getElementById("os-time").textContent = lastUpdate;
     }
     else {
         console.log("Country don't exist")
