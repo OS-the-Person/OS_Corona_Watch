@@ -1,13 +1,44 @@
 body {
     margin: 0px;
+    background-color: rgb(241, 241, 241);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+#osSpace {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px;
+    margin: 10px 200px;
+    /* border: 1px solid black; */
+}
+
 .main-container {
-    margin: auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px;
     margin-bottom: 40px;
     padding: 20px;
     width: 750px;
+    flex: 4;
+}
+
+.os-heading {
+    text-align: center;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
+#osHeading {
+    font-weight: 20px;
+}
+
+#osSide {
+    flex: 2;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
 }
 
 #topBar {
@@ -16,7 +47,8 @@ body {
     justify-content: space-around;
     height: 50px;
     width: 100%;
-    background-color: #eee;
+    background-color: #DDDDDD;
+    border-radius: 5px;
 }
 
 .os-main-info {
@@ -38,12 +70,13 @@ body {
 #osContent {
     margin-top: 50px;
     padding: 20px;
-    border: 1px solid blue;
+    border-radius: 5px;
+    background-color: rgb(221, 221, 221);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    margin-bottom: 40px;
+    
 }
 
 #osInput {
@@ -61,15 +94,19 @@ body {
 }
 
 .os-search-btn {
-    background-color: rgba(242, 242, 242);
+    background-color: rgb(228, 139, 22);
     padding: 10px 15px;
     font-size: 16px;
+    font-weight: bold;
     border: none;
-    color: rgba(85, 89, 93);
+    color: white;
     margin: 4px;
     width: 200px;
     border-radius: 4px;
     cursor: pointer;
+}
+.os-search-btn:active {
+    background-color: rgb(236, 236, 236);
 }
 
 #osSearch form {
@@ -77,7 +114,7 @@ body {
 }
 
 .os-lister {
-    border:1px solid #444;
+    /* border:1px solid #444; */
     padding: 20px;
     margin: 20px;
     width: 90%;
@@ -89,7 +126,7 @@ body {
 .os-country {
     width: 100%;
     height: 200px;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     padding: 20px;
     margin: 10px;
     text-align: left;
@@ -103,6 +140,27 @@ body {
 
 .os-dets {
     font-size: 50px;
+}
+
+#osMaxDeath {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.os-deaths-item {
+    border: 1px solid rgb(228, 139, 22);
+    /* border-radius: 5px; */
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.os-deaths-item span {
+    margin: 10px;
+
 }
 
 .os-footer {
